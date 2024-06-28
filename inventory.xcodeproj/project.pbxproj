@@ -64,6 +64,7 @@
 				F13F88FE2C2F04660037826D /* ContentView.swift */,
 				F13F89102C2F0F080037826D /* InventoryManager.swift */,
 				F13F890C2C2F0B550037826D /* InventoryObjects.swift */,
+				F13F890E2C2F0D570037826D /* README.md */,
 				F13F890A2C2F05660037826D /* HomeView.swift */,
 				F13F89002C2F04670037826D /* Assets.xcassets */,
 				F13F89022C2F04670037826D /* Preview Content */,
