@@ -10,11 +10,19 @@ import Foundation
 enum Kallax: Codable {
     case shelf(number: Int)
     case drawer(number: Int)
+    
+    var number: String {
+        return "\(self.number)"
+    }
 }
 
 enum Alex: Codable {
     case left(number: Int)
     case right(number: Int)
+    
+    var number: String {
+        return "\(self.number)"
+    }
 }
 
 enum Shelf: Codable {
@@ -28,6 +36,8 @@ struct Object: Identifiable, Codable {
     var name: String
     var location: Shelf
     var description: String
+    var sfIcon: String = "book.pages"
+    var drawer: Int = 1
 }
 
 struct SavedData: Identifiable, Codable {
@@ -37,4 +47,5 @@ struct SavedData: Identifiable, Codable {
     var kallaxShelf: [Object]
     var alexLeft: [Object]
     var alexRight: [Object]
+    
 }

@@ -15,6 +15,8 @@
 		F13F890D2C2F0B550037826D /* InventoryObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13F890C2C2F0B550037826D /* InventoryObjects.swift */; };
 		F13F890F2C2F0D570037826D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F13F890E2C2F0D570037826D /* README.md */; };
 		F13F89112C2F0F080037826D /* InventoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13F89102C2F0F080037826D /* InventoryManager.swift */; };
+		F13F89132C2FB2600037826D /* LeftAlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13F89122C2FB2600037826D /* LeftAlexView.swift */; };
+		F1BC72B02C2FCE0300D877C9 /* SFSymbolsPicker in Frameworks */ = {isa = PBXBuildFile; productRef = F1BC72AF2C2FCE0300D877C9 /* SFSymbolsPicker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,7 @@
 		F13F890C2C2F0B550037826D /* InventoryObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryObjects.swift; sourceTree = "<group>"; };
 		F13F890E2C2F0D570037826D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F13F89102C2F0F080037826D /* InventoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryManager.swift; sourceTree = "<group>"; };
+		F13F89122C2FB2600037826D /* LeftAlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlexView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1BC72B02C2FCE0300D877C9 /* SFSymbolsPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,9 +66,9 @@
 			children = (
 				F13F88FC2C2F04660037826D /* inventoryApp.swift */,
 				F13F88FE2C2F04660037826D /* ContentView.swift */,
+				F13F89122C2FB2600037826D /* LeftAlexView.swift */,
 				F13F89102C2F0F080037826D /* InventoryManager.swift */,
 				F13F890C2C2F0B550037826D /* InventoryObjects.swift */,
-				F13F890E2C2F0D570037826D /* README.md */,
 				F13F890A2C2F05660037826D /* HomeView.swift */,
 				F13F89002C2F04670037826D /* Assets.xcassets */,
 				F13F89022C2F04670037826D /* Preview Content */,
@@ -96,6 +100,9 @@
 			dependencies = (
 			);
 			name = inventory;
+			packageProductDependencies = (
+				F1BC72AF2C2FCE0300D877C9 /* SFSymbolsPicker */,
+			);
 			productName = inventory;
 			productReference = F13F88F92C2F04660037826D /* inventory.app */;
 			productType = "com.apple.product-type.application";
@@ -124,6 +131,9 @@
 				Base,
 			);
 			mainGroup = F13F88F02C2F04660037826D;
+			packageReferences = (
+				F1BC72AE2C2FCE0300D877C9 /* XCRemoteSwiftPackageReference "SFSymbolsPickerForSwiftUI" */,
+			);
 			productRefGroup = F13F88FA2C2F04660037826D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -156,6 +166,7 @@
 				F13F890D2C2F0B550037826D /* InventoryObjects.swift in Sources */,
 				F13F88FF2C2F04660037826D /* ContentView.swift in Sources */,
 				F13F88FD2C2F04660037826D /* inventoryApp.swift in Sources */,
+				F13F89132C2FB2600037826D /* LeftAlexView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +372,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1BC72AE2C2FCE0300D877C9 /* XCRemoteSwiftPackageReference "SFSymbolsPickerForSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alessiorubicini/SFSymbolsPickerForSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1BC72AF2C2FCE0300D877C9 /* SFSymbolsPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1BC72AE2C2FCE0300D877C9 /* XCRemoteSwiftPackageReference "SFSymbolsPickerForSwiftUI" */;
+			productName = SFSymbolsPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F13F88F12C2F04660037826D /* Project object */;
 }
