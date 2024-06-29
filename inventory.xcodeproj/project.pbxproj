@@ -17,6 +17,9 @@
 		F13F89112C2F0F080037826D /* InventoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13F89102C2F0F080037826D /* InventoryManager.swift */; };
 		F13F89132C2FB2600037826D /* LeftAlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13F89122C2FB2600037826D /* LeftAlexView.swift */; };
 		F1BC72B02C2FCE0300D877C9 /* SFSymbolsPicker in Frameworks */ = {isa = PBXBuildFile; productRef = F1BC72AF2C2FCE0300D877C9 /* SFSymbolsPicker */; };
+		F1BC72B42C2FF1C600D877C9 /* KallaxDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC72B12C2FF1C500D877C9 /* KallaxDrawerView.swift */; };
+		F1BC72B52C2FF1C600D877C9 /* KallaxShelfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC72B22C2FF1C500D877C9 /* KallaxShelfView.swift */; };
+		F1BC72B62C2FF1C600D877C9 /* RightAlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BC72B32C2FF1C600D877C9 /* RightAlexView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		F13F890E2C2F0D570037826D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F13F89102C2F0F080037826D /* InventoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryManager.swift; sourceTree = "<group>"; };
 		F13F89122C2FB2600037826D /* LeftAlexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlexView.swift; sourceTree = "<group>"; };
+		F1BC72B12C2FF1C500D877C9 /* KallaxDrawerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KallaxDrawerView.swift; sourceTree = "<group>"; };
+		F1BC72B22C2FF1C500D877C9 /* KallaxShelfView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KallaxShelfView.swift; sourceTree = "<group>"; };
+		F1BC72B32C2FF1C600D877C9 /* RightAlexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightAlexView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,9 @@
 				F13F89102C2F0F080037826D /* InventoryManager.swift */,
 				F13F890C2C2F0B550037826D /* InventoryObjects.swift */,
 				F13F890A2C2F05660037826D /* HomeView.swift */,
+				F1BC72B12C2FF1C500D877C9 /* KallaxDrawerView.swift */,
+				F1BC72B22C2FF1C500D877C9 /* KallaxShelfView.swift */,
+				F1BC72B32C2FF1C600D877C9 /* RightAlexView.swift */,
 				F13F89002C2F04670037826D /* Assets.xcassets */,
 				F13F89022C2F04670037826D /* Preview Content */,
 			);
@@ -163,8 +172,11 @@
 			files = (
 				F13F890B2C2F05660037826D /* HomeView.swift in Sources */,
 				F13F89112C2F0F080037826D /* InventoryManager.swift in Sources */,
+				F1BC72B52C2FF1C600D877C9 /* KallaxShelfView.swift in Sources */,
 				F13F890D2C2F0B550037826D /* InventoryObjects.swift in Sources */,
+				F1BC72B42C2FF1C600D877C9 /* KallaxDrawerView.swift in Sources */,
 				F13F88FF2C2F04660037826D /* ContentView.swift in Sources */,
+				F1BC72B62C2FF1C600D877C9 /* RightAlexView.swift in Sources */,
 				F13F88FD2C2F04660037826D /* inventoryApp.swift in Sources */,
 				F13F89132C2FB2600037826D /* LeftAlexView.swift in Sources */,
 			);

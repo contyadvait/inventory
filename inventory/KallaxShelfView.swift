@@ -1,5 +1,5 @@
 //
-//  LeftAlexView.swift
+//  KallaxShelfView.swift
 //  inventory
 //
 //  Created by Milind Contractor on 29/6/24.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SFSymbolsPicker
 
-struct AddObjectView: View {
+struct AddObjectView3: View {
     @ObservedObject var savedDataManager: SavedDataManager
     @State var objectToAdd: String = "Some object"
     @State var drawer: Int = 1
@@ -20,7 +20,7 @@ struct AddObjectView: View {
         NavigationView {
             Form {
                 TextField("Object", text: $objectToAdd)
-                Stepper(value: $drawer, in: 1...5) {
+                Stepper(value: $drawer, in: 1...3) {
                     Text("Drawer: \(drawer)")
                 }
                 HStack {
@@ -35,7 +35,7 @@ struct AddObjectView: View {
                 }
                 TextField("Description", text: $description)
                 Button {
-                    savedDataManager.savedDatas[0].alexLeft.append(Object(name: objectToAdd, location: .alex(location: .left(number: drawer)), description: description, drawer: drawer))
+                    savedDataManager.savedDatas[0].kallaxShelf.append(Object(name: objectToAdd, location: .kallax(location: .shelf(number: drawer)), description: description, drawer: drawer))
                     dismiss()
                 } label: {
                     Label("Add item", systemImage: "plus")
@@ -54,9 +54,9 @@ struct AddObjectView: View {
     }
 }
 
-struct LeftAlexView: View {
+struct KallaxShelfView: View {
     @ObservedObject var savedDataManager: SavedDataManager
-    let testData = [Object(name: "Science Compilation", location: .alex(location: .left(number: 1)), description: "Physics O Level Compilation for the last 10 years of yap", sfIcon: "book.pages", drawer: 3)]
+    let testData = [Object(name: "Science Compilation", location: .kallax(location: .shelf(number: 1)), description: "Physics O Level Compilation for the last 10 years of yap", sfIcon: "book.pages", drawer: 3)]
     @State var addObject = false
     
     @State var showChanger = false
@@ -91,13 +91,13 @@ struct LeftAlexView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach($savedDataManager.savedDatas[0].alexLeft, id: \.id) { $object in
+                ForEach($savedDataManager.savedDatas[0].kallaxShelf, id: \.id) { $object in
                     NavigationLink {
                         Form {
                             TextField("Object", text: $object.name)
                             TextField("Description", text: $object.description)
                             
-                            Stepper(value: $object.drawer, in: 1...5) {
+                            Stepper(value: $object.drawer, in: 1...3) {
                                 Text("Drawer: \(object.drawer)")
                             }
                             
@@ -117,7 +117,7 @@ struct LeftAlexView: View {
                             }
                             
                             Button {
-                                savedDataManager.savedDatas[0].delete(id: object.id, list: .alexL)
+                                savedDataManager.savedDatas[0].delete(id: object.id, list: .kallaxShelf)
                             } label: {
                                 Image(systemName: "trash")
                                 Text("Delete")
@@ -128,7 +128,7 @@ struct LeftAlexView: View {
                     }
                 }
             }
-            .navigationTitle(Text("Left Alex Drawer"))
+            .navigationTitle(Text("Kallax Shelves"))
             .toolbar {
                 Button {
                     addObject = true
@@ -137,12 +137,8 @@ struct LeftAlexView: View {
                 }
             }
             .fullScreenCover(isPresented: $addObject) {
-                AddObjectView(savedDataManager: savedDataManager)
+                AddObjectView3(savedDataManager: savedDataManager)
             }
         }
     }
-}
-
-#Preview {
-    LeftAlexView(savedDataManager: SavedDataManager())
 }

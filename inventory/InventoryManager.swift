@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 class SavedDataManager: ObservableObject {
-    @Published var savedDatas: [SavedData] = [] {
+    @Published var savedDatas: [SavedData] = [SavedData(kallaxDrawers: [Object(name: "Cables", location: .kallax(location: .shelf(number: 1)), description: "All the cables", sfIcon: "cable.coaxial", drawer: 1)], kallaxShelf: [], alexLeft: [Object(name: "Pens", location: .alex(location: .left(number: 1)), description: "All pens, pencils, etc.", drawer: 1)], alexRight: [])] {
         didSet {
             save()
         }

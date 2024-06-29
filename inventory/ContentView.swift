@@ -12,16 +12,16 @@ struct ContentView: View {
     @State var selectedTab: Int = 1
     var body: some View {
         TabView(selection: $selectedTab) {
-            Text("Alex Drawer 1 (L)").tabItem { Label("Alex", systemImage: "left.circle") }.tag(2)
-            Text("Kallax Drawers").tabItem { Label("Kallax", systemImage: "rectangle.grid.1x2") }.tag(4)
+            LeftAlexView(savedDataManager: savedDataManager).tabItem { Label("Alex", systemImage: "left.circle") }.tag(2)
+            KallaxDrawerView(savedDataManager: savedDataManager).tabItem { Label("Kallax", systemImage: "rectangle.grid.1x2") }.tag(4)
             
             HomeView(tabSelected: $selectedTab).tabItem {
                 Label("Home", systemImage: "house")
             }
             .tag(1)
             
-            Text("Kallax Shelves").tabItem { Label("Kallax", systemImage: "square.grid.2x2.fill") }.tag(5)
-            Text("Alex Drawer 2 (R}").tabItem { Label("Alex", systemImage: "right.circle") }.tag(3)
+            KallaxShelfView(savedDataManager: savedDataManager).tabItem { Label("Kallax", systemImage: "square.grid.2x2.fill") }.tag(5)
+            RightAlexView(savedDataManager: savedDataManager).tabItem { Label("Alex", systemImage: "right.circle") }.tag(3)
         }
     }
 }

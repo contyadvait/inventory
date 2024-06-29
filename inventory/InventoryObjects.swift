@@ -16,6 +16,10 @@ enum Kallax: Codable {
     }
 }
 
+enum ObjectEdit: Codable {
+    case alexL, alexR, kallaxShelf, kallaxDrawer
+}
+
 enum Alex: Codable {
     case left(number: Int)
     case right(number: Int)
@@ -48,4 +52,29 @@ struct SavedData: Identifiable, Codable {
     var alexLeft: [Object]
     var alexRight: [Object]
     
+    mutating func delete(id: UUID, list: ObjectEdit) {
+        
+        switch list {
+        case .alexL:
+            if let index = alexLeft.index(where: {$0.id == id})
+            {
+                alexLeft.remove(at: index)
+            }
+        case .alexR:
+            if let index = alexRight.index(where: {$0.id == id})
+            {
+                alexRight.remove(at: index)
+            }
+        case .kallaxShelf:
+            if let index = kallaxShelf.index(where: {$0.id == id})
+            {
+                kallaxShelf.remove(at: index)
+            }
+        case .kallaxDrawer:
+            if let index = kallaxDrawers.index(where: {$0.id == id})
+            {
+                kallaxDrawers.remove(at: index)
+            }
+        }
+    }
 }
